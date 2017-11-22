@@ -13,9 +13,10 @@ import java.util.ArrayList;
 public class BasketServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-
         ArrayList<Product> products = (ArrayList)req.getServletContext().getAttribute("products");
+        for (Product product: products) {
+            product.setAtBasket(false);
+        }
         Cookie[] cookies = req.getCookies();
         int productId = 0;
         for (Product product: products) {
@@ -30,9 +31,6 @@ public class BasketServlet extends HttpServlet {
                 }
                 if(productId==id) {
                     products.get(productId).setAtBasket(true);
-                }
-                else {
-                    products.get(productId).setAtBasket(false);
                 }
             }
             productId++;

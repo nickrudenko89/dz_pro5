@@ -12,4 +12,16 @@
         <price>1699.99</price>
         <overview>Mobile phone.</overview>
     </product>
+    <product>
+        <type>Pen</type>
+        <name>Parker</name>
+        <price>299.99</price>
+        <overview>The pest pen in the world.</overview>
+    </product>
+    <product>
+        <type>Tablet</type>
+        <name>Lenovo Jogo</name>
+        <price>200.00</price>
+        <overview>Simple tablet.</overview>
+    </product>
 </products>
